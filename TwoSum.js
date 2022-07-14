@@ -1,18 +1,18 @@
-var twoSum = function(array, target) {
+var twoSum = function(nums, target) {
     let hashMap = {}
 
-    let lengthOfArray = array.length;
+    let lengthOfArray = nums.length;
 
     for(let i = 0;i < lengthOfArray; i++) {
 
-        let containKey = target - array[i];
+        let containKey = target - nums[i];
         
         let content = hashMap[containKey];
         if(content !=undefined) {
-            return [array[hashMap[containKey]],array[i]]
+            return [nums[hashMap[containKey]],nums[i]]
         }
 
-        hashMap[array[i]] = i;
+        hashMap[nums[i]] = i;
         
     }
 };
